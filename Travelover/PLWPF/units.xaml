@@ -1,0 +1,48 @@
+﻿<Window x:Class="PLWPF.units"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PLWPF"
+        mc:Ignorable="d"
+        Title="units" Height="600" Width="900">
+    <Window.Background>
+        <ImageBrush ImageSource="images\3d1291e3bf2769ec4900143a2d34c17d.jpg" Opacity="0.7"/>
+    </Window.Background>
+    <Grid Background="White" Opacity="0.7" Margin="0,24,2,27">
+        <StackPanel Name="sp_u" Background="White" Height="450" Opacity="0.7" Margin="0,60,326,59">
+            <ListView x:Name="ListView_Units"  HorizontalAlignment="Left" VerticalAlignment="Top"   Height="324">
+                <ListView.ItemContainerStyle>
+                    <Style TargetType="{x:Type ListViewItem}">
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type ListViewItem}">
+                                    <Border Padding="2" BorderThickness="3" BorderBrush="Black" 
+                                            Background="{x:Null}" CornerRadius="3" Margin="3">
+                                        <GridViewRowPresenter HorizontalAlignment="Stretch" Width="Auto" Margin="0"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </ListView.ItemContainerStyle>
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Key" DisplayMemberBinding="{Binding HostingUnitkey}" Width="110"/>
+                        <GridViewColumn  Header="Owner ID" DisplayMemberBinding="{Binding Owner}" Width="110"/>
+                        <GridViewColumn Header="Area" DisplayMemberBinding="{Binding Area}" Width="110"/>
+                        <GridViewColumn Header="Name" DisplayMemberBinding="{Binding HostingUnitName}" Width="110"/>
+                        <GridViewColumn Header="Price" DisplayMemberBinding="{Binding price}" Width="110"/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+            <Label Content="List of the hosting units..." HorizontalAlignment="Left"  VerticalAlignment="Center" Height="63" Width="422" FontSize="30" Foreground="IndianRed" FontFamily="Segoe Print" FontWeight="Bold"/>
+
+        </StackPanel>
+        <Button x:Name="sor" Content="Group by Area" Foreground="White" Background="IndianRed" BorderThickness="3"  BorderBrush="{x:Null}" Margin="603,117,88,362" FontFamily="Segoe UI Black" FontSize="14" Click="sor_Click"/>
+        <ComboBox x:Name="area1"   HorizontalAlignment="Left" Margin="594,52,0,0" VerticalAlignment="Top" Width="222" Height="43" RenderTransformOrigin="-0.074,-1.096" FontSize="18" />
+        <Button x:Name="lowest" Content="The cheapest unit" Foreground="White" Background="IndianRed" BorderThickness="3"  BorderBrush="{x:Null}" Margin="610,211,95,264" FontFamily="Segoe UI Black" FontSize="14" Click="lowest_Click"/>
+        <TextBlock x:Name="ans" HorizontalAlignment="Left" Margin="610,269,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Height="28" Width="185"/>
+
+    </Grid>
+</Window>

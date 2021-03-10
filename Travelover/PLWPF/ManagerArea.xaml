@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="PLWPF.ManagerArea"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PLWPF"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid Height="400" Width="800">
+        <Label HorizontalAlignment="Left" Margin="31,40,0,0" VerticalAlignment="Top" Foreground="IndianRed" Height="58" Width="599" FontSize="30" FontFamily="Segoe Print" FontWeight="Bold" Content="pick up">
+        </Label>
+        <StackPanel HorizontalAlignment="Left" Height="275" Margin="13,115,0,0" VerticalAlignment="Top" Width="200">
+
+            <Button Name="r" Background="{x:Null}"  Content="REQUEST"  HorizontalAlignment="Left" Margin="14,12,0,0" VerticalAlignment="Top"  FontWeight="Bold" Foreground="IndianRed" BorderBrush="{x:Null}" Height="60" Width="115" FontFamily="Ink Free" FontSize="20" Click="r_Click"/>
+            <Button x:Name="h" Background="{x:Null}"  Content="UNITS"  HorizontalAlignment="Left" Margin="14,12,0,0" VerticalAlignment="Top"  FontWeight="Bold" Foreground="IndianRed" BorderBrush="{x:Null}" Height="60" Width="115" FontFamily="Ink Free" FontSize="20" Click="h_Click"/>
+            <Button x:Name="o" Background="{x:Null}"  Content="ORDERS"  HorizontalAlignment="Left" Margin="14,12,0,0" VerticalAlignment="Top"  FontWeight="Bold" Foreground="IndianRed" BorderBrush="{x:Null}" Height="60" Width="115" FontFamily="Ink Free" FontSize="20" Click="o_Click"/>
+
+        </StackPanel>
+        <ComboBox x:Name="mounthes"   HorizontalAlignment="Left" Margin="530,92,0,0" VerticalAlignment="Top" Width="185" Height="41" RenderTransformOrigin="-0.074,-1.096" FontSize="18"/>
+        <Button x:Name="com" Content="Fee by Mounth" Foreground="White" Background="IndianRed" BorderThickness="3"  BorderBrush="{x:Null}" Margin="530,39,85,318" FontFamily="Segoe UI Black" FontSize="14" Click="Fee_click"/>
+        <TextBlock Name="fee" HorizontalAlignment="Left" Margin="530,143,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="185" Height="36"/>
+        <Button x:Name="perfect" Content="The perfect host" Foreground="White" Background="IndianRed" BorderThickness="3"  BorderBrush="{x:Null}" Margin="530,187,85,170" FontFamily="Segoe UI Black" FontSize="14" Click="perfect_Click"/>
+        <TextBlock Name="theH" HorizontalAlignment="Left" Margin="530,237,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Height="28" Width="185"/>
+        <Button x:Name="pop" Content="The most popular area" Foreground="White" Background="IndianRed" BorderThickness="3"  BorderBrush="{x:Null}" Margin="530,275,85,82" FontFamily="Segoe UI Black" FontSize="14" Click="pop_Click"/>
+        <TextBlock x:Name="pop_ans" HorizontalAlignment="Left" Margin="530,333,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Height="28" Width="185"/>
+
+
+    </Grid>
+</UserControl>
